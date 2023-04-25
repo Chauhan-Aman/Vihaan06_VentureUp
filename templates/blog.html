@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Venture Up</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/add.css') }}">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div class="container-add bb2sw">
+            <div id="logo">
+                <img src="{{ url_for('static', filename='img/Logo.png') }}" alt="">
+                <h2>Venture Up</h2>
+            </div>
+            <div class="menu-bar">
+                <ul class="nav-ul">
+                    <li class="nav-item active"><a class="primary-a" href="./index.html">Home</a></li>
+                    <li class="nav-item"><a class="primary-a" href="{{ url_for('startup.startup_home') }}">Startups</a></li>
+                    <li class="nav-item"><a class="primary-a" href="/">Blog</a>
+                        <div class="sub-menu-1">
+                            <ul>
+                                <li><a href="./Blog-form.html" target="_blank">Create BLog</a></li>
+                                <li><a href="./Blog-Page.html" target="_blank">Blogs</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="primary-a" href="./index.html#About">About</a></li>
+                    <li class="nav-item"><a class="primary-a fixed" href="./index.html#Contact">Contact</a></li>
+                </ul>
+            </div>
+            <ul class="notification-section">
+                <li><a href="./Notification.html" class="Bell-icon-a"><img src="{{ url_for('static', filename='img/bell-icon.webp') }}" alt="" class="Bell-icon"></a></li>
+            </ul>
+            <div class="login">
+                <a href="" id="Log-in">Log In</a>
+                <button class="Register">Register</button>
+            </div>
+        </div>
+    </nav>
+
+    <section id="Blog-Page">
+        <div class="Blog-ci">
+            <img src="{{ url_for('static', filename='Logo - blog-page.png') }}" alt="" class="Logo-Blog-Page">
+            <input type="text" class="Search-Box" placeholder="Search...">
+        </div>
+        <hr class="hr-w">
+        <div class="Blog">
+            <img src="{{ company['logo'] }}" alt="" class="Blog-cl">
+            <span>{{ company['name'] }}</span>
+            <span>{{ blog['date'] }}</span>
+            <div class="Blog-Content">
+                <h2>{{ blog['title'] }}</h2>
+                <p>{{ blog['content'] }}</p>
+                <hr class="hr-w-blog">
+            </div>
+            <div class="Blog-Socials">
+                <img src="{{ url_for('static', filename='fb.webp') }}fb.webp" alt="" class="img-w invert">
+                <img src="{{ url_for('static', filename='ln.webp') }}" alt="" class="img-w invert">
+                <hr class="hr-w-blog">
+                <span class="views vc">0 views</span>
+                <span class="comments vc">0 comments</span>
+                <span class="likes">&#9829;</span>
+            </div>
+            <div id="Comments">
+                <h4>Comments</h4>
+                <hr class="hr-w-blog-c">
+                <input type="text" class="Comment" placeholder="Write a comment...">
+            </div>
+        </div>
+        <div class="More-Blogs">
+            <div class="container">
+                <h1 class="chk-more-blogs">Check Out Some More Blogs... </h1>
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="https://source.unsplash.com/user/erondu/1600x900/?space" alt="">
+                            <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                    lead-in to additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    </div>
+                                    <small class="text-body-secondary">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="https://source.unsplash.com/user/erondu/1600x900/?roads" alt="">
+                            <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                    lead-in to additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    </div>
+                                    <small class="text-body-secondary">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="https://source.unsplash.com/user/erondu/1600x900/?money" alt="">
+                            <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                    lead-in to additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    </div>
+                                    <small class="text-body-secondary">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="https://source.unsplash.com/user/erondu/1600x900/?random" alt="">
+                            <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                    lead-in to additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    </div>
+                                    <small class="text-body-secondary">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="https://source.unsplash.com/user/erondu/1600x900/?nature" alt="">
+                            <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                    lead-in to additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    </div>
+                                    <small class="text-body-secondary">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="https://source.unsplash.com/user/erondu/1600x900/?crypto" alt="">
+                            <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                    lead-in to additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    </div>
+                                    <small class="text-body-secondary">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="More-blogs-lm">Load More</button>
+        </div>
+        
+    </section>
+
+    <a href="#" class="Back-To-Top">&#8679</a>
+
+    <section class="contact">
+        <h6>&#169 by Company Name. All Rights Reserved</h6>
+    </section>
+
+    <!-- Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+        integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+        integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='css/form.css') }}">
+
+
+<form action="{{ url_for('auth.register') }}" method="post" enctype="multipart/form-data">
+
+    <h1>Startup Info</h1>
+
+    <fieldset>
+        <label for="logo">Company Logo</label>
+        <input type="file" id="logo" name="logo" required>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="shortdesc">Short description:</label>
+        <input type="text" id="shortdesc" name="short_description" required>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="long_description"></textarea>
+        
+        <label for="domain">Domain:</label>
+        <select id="domain">
+            <option value="test">Test</option>
+        </select>
+
+        <label for="url">Website URL:</label>
+        <input type="url" id="url" name="url" required>
+
+        <label for="founded">Founded In:</label>
+        <input type="text" id="founded" name="founded_year" required>
+
+        <label for="teamsize">Team Size:</label>
+        <input type="text" id="teamsize" name="team_size" required>
+
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" required>
+    </fieldset>
+
+    <fieldset>
+        <label for="pfp">Founder Profile Picture</label>
+        <input type="file" id="pfp" name="founder_pfp" required>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="founder_name" value="{{ user['name'] }}" required>
+
+        <label for="twitter">Twitter:</label>
+        <input type="text" id="twitter" name="twitter" required>
+
+        <label for="linkedin">LinkedIn:</label>
+        <input type="text" id="linkedin" name="linkedin" required>
+    </fieldset>
+
+    <button type="submit">Submit</button>
+</form>
